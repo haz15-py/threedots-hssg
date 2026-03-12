@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>HSSG Operational Simulation</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="topbar">
+  <div>HSSG – AI Command Interface</div>
+  <div id="systemStatus">SYSTEM READY</div>
+</div>
+
+<div class="main">
+
+  <div class="map-container">
+    <img src="assets/map.jpg" id="mapImage">
+    <div id="marker" class="marker hidden"></div>
+  </div>
+
+  <div class="side-panel">
+
+    <h2>تشغيل السيناريو</h2>
+
+    <button onclick="lostChild()">ضياع طفل – المطاف</button>
+    <button onclick="emergencyMasaa()">طوارئ – المسعى</button>
+    <button onclick="resetSystem()">إعادة التعيين</button>
+
+    <div class="data">
+      <p>حالة النظام: <span id="analysis">--</span></p>
+      <p>ثقة الذكاء الاصطناعي: <span id="confidence">--</span>%</p>
+      <p>زمن الاستجابة: <span id="responseTime">--</span> ثانية</p>
+      <p>طريقة الحساب: <span id="calculation">--</span></p>
+    </div>
+
+    <h3>سجل العمليات</h3>
+    <div id="log"></div>
+
+  </div>
+
+</div>
+
+<audio id="alertSound" src="assets/alert.mp3"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
